@@ -1,0 +1,95 @@
+.form-background {
+  width: 75%;
+
+  display: flex;
+  justify-content: center;
+
+  background-color: rgba($color-secondary, 1);
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin-top: 20px;
+
+  #new-employee-form {
+    width: 100%;
+    max-width: 800px;
+
+    display: flex;
+    flex-direction: column;
+
+    .react-datepicker__input-container {
+      width: 50%;
+    }
+    #birthDate,
+    #startDate {
+      width: 100%;
+    }
+
+    label {
+      width: fit-content;
+      display: block;
+      margin-top: 14px;
+      margin-bottom: 5px;
+    }
+    .address {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+    }
+    .css-t3ipsp-control {
+      border-color: none;
+      box-shadow: 0 0 0 1px $color-primary_darker;
+      &:hover {
+        border-color: none;
+      }
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 6px;
+      width: 40%;
+      align-self: center;
+      font-size: 18px;
+      cursor: pointer;
+      border-radius: 6px;
+      background-color: $color-primary_lighter;
+      transition: all 0.3s;
+
+      &:hover {
+        background-color: $color-primary_dark;
+        color: $color-white;
+      }
+    }
+    .errorMessage {
+      color: white;
+    }
+  }
+}
+.btnDelete {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 4px;
+  cursor: pointer;
+}
+._PH6f8 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 162vh;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+._3bARu {
+  position: fixed;
+  width: 200px;
+  top: 0;
+  left: 50vw;
+  transform: translate(-50%, 35vh);
+  background-color: #93ad18;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+  justify-content: center;
+  border-radius: 25px;
+}
