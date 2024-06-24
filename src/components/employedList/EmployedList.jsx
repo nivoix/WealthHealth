@@ -17,6 +17,7 @@ import { IoIosArrowDown } from "react-icons/io";
 
 const EmployedList = () => {
   let storedEmployees = useSelector((state) => state.employees.employeeList);
+  console.log([storedEmployees]);
   const data = React.useMemo(() => storedEmployees, [storedEmployees]);
   const dispatch = useDispatch();
 

@@ -97,6 +97,7 @@ const BirthDatePicker = ({ birthDate, setBirthDate }) => {
         </div>
       )}
       id="birthDate"
+      data-testid="birthDate"
       name="birthDate"
       selected={birthDate}
       onChange={(date) => setBirthDate(date)}

@@ -21,8 +21,7 @@ const NewEmployeeForm = () => {
   const [selectedDepartment, setSelectedDepartment] = useState();
   const dispatch = useDispatch();
   const form = useRef(null);
-  console.log(form);
-  console.log(birthDate);
+
   const {
     register,
     handleSubmit,
@@ -30,7 +29,6 @@ const NewEmployeeForm = () => {
     reset,
   } = useForm();
 
-  console.log(errors);
   const onSubmit = () => {
     const datas = Object.fromEntries(new FormData(form.current));
     datas.id = nanoid();

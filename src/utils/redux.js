@@ -12,13 +12,12 @@ import {
 import storage from "redux-persist/lib/storage";
 import { employeeList } from "../assets/datas/datasMock";
 
-const employeesInfo = createSlice({
+export const employeesInfo = createSlice({
   name: "employees",
-  initialState: employeeList,
+  initialState: { employeeList: employeeList },
   reducers: {
     addEmployee: (state, action) => {
       const newEmployee = action.payload;
-      console.log(newEmployee);
       state.employeeList.push(newEmployee);
     },
     deleteEmployee: (state, action) => {
@@ -37,7 +36,10 @@ const persistConfig = {
   storage,
 };
 
-const persistedReducer = persistReducer(persistConfig, employeesInfo.reducer);
+export const persistedReducer = persistReducer(
+  persistConfig,
+  employeesInfo.reducer
+);
 
 export const store = configureStore({
   reducer: { employees: persistedReducer },
