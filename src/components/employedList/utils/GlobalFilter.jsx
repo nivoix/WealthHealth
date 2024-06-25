@@ -10,8 +10,10 @@ const GlobalFilter = ({ globalFilter, setGlobalFilter }) => {
 
   return (
     <div className="filter-menu">
-      Search :{" "}
+      <label htmlFor="search-input"></label>
+      Search :
       <input
+        id="search-input"
         className="search-input"
         value={value || ""}
         onChange={(e) => {
