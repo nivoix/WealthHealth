@@ -7,23 +7,26 @@ import {
   usePagination,
   useSortBy,
 } from "react-table";
-import { useDispatch } from "react-redux";
-import { deleteEmployee } from "../../utils/redux";
 import BrowsePages from "./utils/BrowsePages";
 import GlobalFilter from "./utils/GlobalFilter";
 import SetPagination from "./utils/SetPagination";
 import { IoIosArrowUp } from "react-icons/io";
 import { IoIosArrowDown } from "react-icons/io";
 
+//********implémentation pour ajouter un bouton delete dans le tableau */
+// import { useDispatch } from "react-redux";
+// import { deleteEmployee } from "../../utils/redux";
+
 const EmployedList = () => {
   let storedEmployees = useSelector((state) => state.employees.employeeList);
   console.log([storedEmployees]);
   const data = React.useMemo(() => storedEmployees, [storedEmployees]);
-  const dispatch = useDispatch();
 
-  const handleDeleteClick = (index, row) => {
-    dispatch(deleteEmployee(row.original.id));
-  };
+  //********implémentation pour ajouter un bouton delete dans le tableau */
+  // const dispatch = useDispatch();
+  // const handleDeleteClick = (index, row) => {
+  //   dispatch(deleteEmployee(row.original.id));
+  // };
 
   const columns = React.useMemo(
     () => [
@@ -187,15 +190,19 @@ const EmployedList = () => {
                         </td>
                       );
                     })}
-                    <td>
-                      <button
-                        className="btnDelete"
-                        key={row.id}
-                        onClick={() => handleDeleteClick(row.index, row)}
-                      >
-                        delete
-                      </button>
-                    </td>
+                    {
+                      //********implémentation pour ajouter
+                      //********un bouton delete dans le tableau *********/
+                      /* <td>
+                        <button
+                          className="btnDelete"
+                          key={row.id}
+                          onClick={() => handleDeleteClick(row.index, row)}
+                        >
+                          delete
+                        </button>
+                      </td>; */
+                    }
                   </tr>
                 );
               })}
