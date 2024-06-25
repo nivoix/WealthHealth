@@ -10,10 +10,13 @@ const GlobalFilter = ({ globalFilter, setGlobalFilter }) => {
 
   return (
     <div className="filter-menu">
-      <label htmlFor="search-input"></label>
+      <label htmlFor="searchInput"></label>
       Search :
       <input
-        id="search-input"
+        id="searchInput"
+        aria-label="searchInput"
+        name="searchInput"
+        type="text"
         className="search-input"
         value={value || ""}
         onChange={(e) => {
